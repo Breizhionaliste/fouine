@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module Indexer</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>Indexer</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/breizh/Desktop/M2S1/fouille%20et%20web/src/Indexer.py">/home/breizh/Desktop/M2S1/fouille et web/src/Indexer.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="elasticsearch.exceptions.html">elasticsearch.exceptions</a><br>
+</td><td width="25%" valign=top><a href="Vectoriser.html">Vectoriser</a><br>
+</td><td width="25%" valign=top><a href="requests.html">requests</a><br>
+</td><td width="25%" valign=top><a href="shelve.html">shelve</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Indexer.html#Indexer">Indexer</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Indexer">class <strong>Indexer</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Indexer">Indexer</a>(elasticSearchURL_='localhost',&nbsp;elasticSearchPort_=9200)<br>
+&nbsp;<br>
+Class&nbsp;used&nbsp;to&nbsp;index&nbsp;the&nbsp;content&nbsp;of&nbsp;a&nbsp;given&nbsp;shelve&nbsp;into&nbsp;ElasticSearch<br>
+Attributes<br>
+----------<br>
+sourceDataTable&nbsp;:&nbsp;DbfilenameShelf<br>
+elasticSearch&nbsp;:&nbsp;Elasticsearch<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Indexer-__init__"><strong>__init__</strong></a>(self, elasticSearchURL_='localhost', elasticSearchPort_=9200)</dt><dd><tt>Parameters<br>
+----------<br>
+elasticSearchURL_&nbsp;:&nbsp;str,&nbsp;optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;url&nbsp;of&nbsp;the&nbsp;target&nbsp;ElasticSearch&nbsp;instance<br>
+elasticSearchPort_&nbsp;:&nbsp;str,&nbsp;optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;TCP&nbsp;port&nbsp;of&nbsp;the&nbsp;target&nbsp;ElasticSearch&nbsp;instance</tt></dd></dl>
+
+<dl><dt><a name="Indexer-search"><strong>search</strong></a>(self, repeat_=False, searchByType_=False)</dt><dd><tt>Launches&nbsp;a&nbsp;search&nbsp;prompt&nbsp;that&nbsp;prints&nbsp;the&nbsp;items&nbsp;that&nbsp;correspond&nbsp;to&nbsp;the&nbsp;given&nbsp;query<br>
+Parameters<br>
+----------<br>
+repeat_&nbsp;:&nbsp;bool,&nbsp;optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;True,&nbsp;the&nbsp;script&nbsp;will&nbsp;keep&nbsp;prompting&nbsp;the&nbsp;user&nbsp;for&nbsp;a&nbsp;request&nbsp;until&nbsp;termination<br>
+searchByType_&nbsp;:&nbsp;bool,&nbsp;optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;true,&nbsp;the&nbsp;user&nbsp;must&nbsp;specifie&nbsp;the&nbsp;field&nbsp;in&nbsp;which&nbsp;he&nbsp;is&nbsp;searching&nbsp;for&nbsp;an&nbsp;occurence</tt></dd></dl>
+
+<hr>
+Static methods defined here:<br>
+<dl><dt><a name="Indexer-fill"><strong>fill</strong></a>(dataTableSrc_='./FetcherDataPool/data.shelve', elasticSearchURL_='localhost', elasticSearchPort_=9200)</dt><dd><tt>[STATIC&nbsp;METHOD]&nbsp;The&nbsp;targeted&nbsp;ElasticSearch&nbsp;instance&nbsp;is&nbsp;filled&nbsp;with&nbsp;the&nbsp;content&nbsp;of&nbsp;the&nbsp;targeted&nbsp;shelve&nbsp;during&nbsp;initialisation.<br>
+Each&nbsp;newly&nbsp;indexed&nbsp;element&nbsp;also&nbsp;receives&nbsp;a&nbsp;guessed&nbsp;label<br>
+Parameters<br>
+----------<br>
+dataTableSrc_&nbsp;:&nbsp;str,&nbsp;optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;location&nbsp;of&nbsp;the&nbsp;target&nbsp;shelve<br>
+elasticSearchURL_&nbsp;:&nbsp;str,&nbsp;optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;url&nbsp;of&nbsp;the&nbsp;target&nbsp;ElasticSearch&nbsp;instance<br>
+elasticSearchPort_&nbsp;:&nbsp;str,&nbsp;optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;TCP&nbsp;port&nbsp;of&nbsp;the&nbsp;target&nbsp;ElasticSearch&nbsp;instance</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-md5"><strong>md5</strong></a> = openssl_md5(string=b'')</dt><dd><tt>Returns&nbsp;a&nbsp;md5&nbsp;hash&nbsp;<a href="builtins.html#object">object</a>;&nbsp;optionally&nbsp;initialized&nbsp;with&nbsp;a&nbsp;string</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>dbmerr</strong> = (&lt;class 'dbm.error'&gt;, &lt;class 'OSError'&gt;)</td></tr></table>
+</body></html>

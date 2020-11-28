@@ -1,0 +1,105 @@
+English stats (with tfIdf):
+  knn:
+    accuracy: 0.8582677165354331
+    recall: 0.8582677165354331
+    f-score: 0.858844607285505
+  logreg:
+    accuracy: 0.8582677165354331
+    recall: 0.8582677165354331
+    f-score: 0.8515188673010574
+  nbayes:
+    accuracy: 0.6850393700787402
+    recall: 0.6850393700787402
+    f-score: 0.6850478971917284
+  svm:
+    accuracy: 0.8188976377952756
+    recall: 0.8666666666666667
+    f-score: 0.8442018592220204
+  nn:
+    accuracy: 0.5826771653543308
+    recall: 0.7326732673267327
+    f-score: 0.6427022954396281
+  ranfor:
+    accuracy: 0.9133858267716536
+    recall: 0.9133858267716536
+    f-score: 0.9115032347711753
+
+French stats (with tfIdf):
+  knn
+    accuracy: 0.7948717948717949
+    recall: 0.7948717948717948
+    f-score: 0.7942141948431256
+  logreg
+    accuracy: 0.8547008547008547
+    recall: 0.8547008547008547
+    f-score: 0.857571266507918
+  nbayes
+    accuracy: 0.5555555555555556
+    recall: 0.5555555555555556
+    f-score: 0.5685892730227705
+  svm
+    accuracy: 0.7606837606837606
+    recall: 0.7606837606837606
+    f-score: 0.7605600387384068
+  nn
+    accuracy: 0.4700854700854701
+    recall: 0.6707317073170732
+    f-score: 0.5579170127614588
+  ranfor
+    accuracy: 0.9230769230769231
+    recall: 0.9230769230769231
+    f-score: 0.9250078479580127
+
+
+    
+English stats (no tfIdf):
+  knn:
+    accuracy: 0.8661417322834646
+    recall: 0.8661417322834646
+    f-score: 0.8641012857423491
+  logreg:
+    accuracy: 0.984251968503937
+    recall: 0.984251968503937
+    f-score: 0.9841400737473511
+  nbayes:
+    accuracy: 0.7874015748031495
+    recall: 0.7874015748031497
+    f-score: 0.768889101475789
+  svm:
+    accuracy: 0.9212598425196851
+    recall: 0.9212598425196851
+    f-score: 0.9209188397637942
+  nn:
+    accuracy: 0.9763779527559056
+    recall: 0.9763779527559056
+    f-score: 0.9759992697137538
+  ranfor:
+    accuracy: 0.9291338582677166
+    recall: 0.9291338582677166
+    f-score: 0.9280520159106677
+
+French stats (no tfIdf):
+  knn
+    accuracy: 0.811965811965812
+    recall: 0.811965811965812
+    f-score: 0.8082146021945352
+  logreg
+    accuracy: 0.9658119658119658
+    recall: 0.9658119658119658
+    f-score: 0.9657961625914399
+  nbayes
+    accuracy: 0.8376068376068376
+    recall: 0.8909090909090909
+    f-score: 0.8637023109626907
+  svm
+    accuracy: 0.9401709401709402
+    recall: 0.9401709401709402
+    f-score: 0.9424246670705375
+  nn
+    accuracy: 0.9487179487179487
+    recall: 0.9487179487179487
+    f-score: 0.9483939444723758
+  ranfor
+    accuracy: 0.9658119658119658
+    recall: 0.9658119658119658
+    f-score: 0.9662817635039858
